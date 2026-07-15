@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">🚌 AI Smart Bus</div>
+</nav>
+
+<div class="result-card">
+
+<h1>Prediction History</h1>
+
+<table>
+
+<tr>
+<th>Bus</th>
+<th>Crowd</th>
+<th>Recommended Bus</th>
+</tr>
+
+{% for row in history %}
+
+<tr>
+<td>{{ row.bus }}</td>
+<td>{{ row.crowd }}</td>
+<td>{{ row.next_bus }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

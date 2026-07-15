@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+🚌 AI Smart Bus
+</div>
+
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/dashboard">Dashboard</a></li>
+<li><a href="/history">History</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+
+<div class="result-card">
+
+<h1>🚌 Prediction Result</h1>
+
+<hr>
+
+<h2>Selected Bus</h2>
+<p>{{ bus }}</p>
+
+<h2>Current Bus Stop</h2>
+<p>{{ stop }}</p>
+
+<h2>Destination</h2>
+<p>{{ destination }}</p>
+
+<h2>Route</h2>
+<p>{{ route }}</p>
+
+<h2>Crowd Level</h2>
+
+{% if crowd=="High" %}
+<h3 style="color:red;">🔴 HIGH</h3>
+
+{% elif crowd=="Medium" %}
+<h3 style="color:orange;">🟡 MEDIUM</h3>
+
+{% else %}
+<h3 style="color:green;">🟢 LOW</h3>
+
+{% endif %}
+
+<hr>
+
+<h2>Recommended Bus</h2>
+
+<p>{{ next_bus }}</p>
+
+<h2>Arrival Time</h2>
+
+<p>{{ arrival }}</p>
+
+<h2>Available Seats</h2>
+
+<p>{{ seats }}</p>
+
+<br>
+
+<a href="/">
+<button>Predict Again</button>
+</a>
+
+</div>
+
+</body>
+</html>

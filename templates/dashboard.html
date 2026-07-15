@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+🚌 AI Smart Bus
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+<li><a href="/dashboard">Dashboard</a></li>
+<li><a href="/history">History</a></li>
+<li><a href="/about">About</a></li>
+
+</ul>
+
+</nav>
+
+<h1 style="text-align:center;margin-top:30px;color:#2563eb;">
+Dashboard
+</h1>
+
+<div class="dashboard">
+
+<div class="box">
+
+<h3>Total Predictions</h3>
+
+<h2>{{ total }}</h2>
+
+</div>
+
+<div class="box">
+
+<h3>High Crowd</h3>
+
+<h2 style="color:red;">{{ high }}</h2>
+
+</div>
+
+<div class="box">
+
+<h3>Medium Crowd</h3>
+
+<h2 style="color:orange;">{{ medium }}</h2>
+
+</div>
+
+<div class="box">
+
+<h3>Low Crowd</h3>
+
+<h2 style="color:green;">{{ low }}</h2>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Dashboard Summary</h2>
+
+<table>
+
+<tr>
+
+<th>Category</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Total Predictions</td>
+
+<td>{{ total }}</td>
+
+</tr>
+
+<tr>
+
+<td>High Crowd</td>
+
+<td>{{ high }}</td>
+
+</tr>
+
+<tr>
+
+<td>Medium Crowd</td>
+
+<td>{{ medium }}</td>
+
+</tr>
+
+<tr>
+
+<td>Low Crowd</td>
+
+<td>{{ low }}</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+<h3>AI Smart Bus Crowd Predictor</h3>
+
+<p>Dashboard Analytics</p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Bus Crowd Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        🚌 AI Smart Bus
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/history">History</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>AI Smart Bus Crowd Predictor</h1>
+
+<p>
+
+Predict bus crowd using Artificial Intelligence.
+Choose the best bus and avoid heavy crowd.
+
+</p>
+
+<a href="#predict">
+
+<button>
+
+Predict Now
+
+</button>
+
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<img src="{{ url_for('static', filename='images/bus.png') }}" width="420">
+
+</div>
+
+</section>
+
+<!-- ================= FORM ================= -->
+
+<section id="predict">
+
+<div class="card">
+
+<h2>Bus Crowd Prediction</h2>
+
+<form action="/predict" method="POST">
+
+<label>Bus Number</label>
+
+<select name="bus" required>
+
+<option value="">Select Bus</option>
+
+<option>21G</option>
+<option>21A</option>
+<option>47A</option>
+<option>10B</option>
+<option>11H</option>
+<option>29C</option>
+<option>5C</option>
+<option>15A</option>
+<option>24B</option>
+<option>3D</option>
+<option>7A</option>
+<option>14C</option>
+<option>18B</option>
+<option>32A</option>
+<option>54D</option>
+<option>72A</option>
+<option>102</option>
+<option>S1</option>
+<option>S2</option>
+<option>S3</option>
+
+</select>
+
+<br><br>
+
+<label>Current Bus Stop</label>
+
+<select name="stop">
+
+<option>Central Bus Stand</option>
+<option>Railway Station</option>
+<option>Gandhipuram</option>
+<option>Town Hall</option>
+<option>Airport</option>
+<option>Medical College</option>
+<option>Collector Office</option>
+<option>Anna Nagar</option>
+<option>New Bus Stand</option>
+<option>Market</option>
+
+</select>
+
+<br><br>
+
+<label>Destination</label>
+
+<select name="destination">
+
+<option>Airport</option>
+<option>Railway Station</option>
+<option>Town Hall</option>
+<option>Medical College</option>
+<option>New Bus Stand</option>
+<option>Collector Office</option>
+<option>Anna Nagar</option>
+
+</select>
+
+<br><br>
+
+<label>Day</label>
+
+<select name="day">
+
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+
+</select>
+
+<br><br>
+
+<label>Time</label>
+
+<select name="time">
+
+<option>Morning</option>
+<option>Afternoon</option>
+<option>Evening</option>
+
+</select>
+
+<br><br>
+
+<label>Weather</label>
+
+<select name="weather">
+
+<option>Sunny</option>
+<option>Rainy</option>
+<option>Cloudy</option>
+
+</select>
+
+<br><br>
+
+<input type="submit" value="Predict Crowd">
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<h2>Project Features</h2>
+
+<div class="feature-container">
+
+<div class="feature-card">
+<h3>🤖 AI Prediction</h3>
+<p>Predict bus crowd using Machine Learning.</p>
+</div>
+
+<div class="feature-card">
+<h3>🚌 Alternative Bus</h3>
+<p>Suggests another bus if current bus is crowded.</p>
+</div>
+
+<div class="feature-card">
+<h3>⏰ Arrival Time</h3>
+<p>Shows estimated next bus arrival.</p>
+</div>
+
+<div class="feature-card">
+<h3>💺 Available Seats</h3>
+<p>Displays available seat count.</p>
+</div>
+
+<div class="feature-card">
+<h3>📊 Dashboard</h3>
+<p>Shows total predictions and crowd analysis.</p>
+</div>
+
+<div class="feature-card">
+<h3>📜 History</h3>
+<p>Stores all previous predictions.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= AVAILABLE BUS ================= -->
+
+<section class="available">
+
+<h2>Available Bus Services</h2>
+
+<table>
+
+<tr>
+
+<th>Bus</th>
+<th>Route</th>
+<th>Status</th>
+
+</tr>
+
+<tr>
+<td>21G</td>
+<td>Central Bus Stand → Airport</td>
+<td>Running</td>
+</tr>
+
+<tr>
+<td>21A</td>
+<td>Railway Station → Airport</td>
+<td>Running</td>
+</tr>
+
+<tr>
+<td>47A</td>
+<td>Town Hall → Medical College</td>
+<td>Running</td>
+</tr>
+
+<tr>
+<td>10B</td>
+<td>Collector Office → Market</td>
+<td>Running</td>
+</tr>
+
+<tr>
+<td>11H</td>
+<td>Anna Nagar → Railway Station</td>
+<td>Running</td>
+</tr>
+
+<tr>
+<td>29C</td>
+<td>Airport → New Bus Stand</td>
+<td>Running</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>AI Smart Bus Crowd Predictor</h3>
+
+<p>
+
+Developed using Python, Flask, HTML, CSS and Machine Learning.
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</footer>
+
+</body>
+</html>

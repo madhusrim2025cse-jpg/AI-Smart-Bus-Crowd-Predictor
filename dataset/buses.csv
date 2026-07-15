@@ -1,0 +1,21 @@
+Bus,Route,Arrival,Seats
+21G,Gandhipuram-Airport,08:30 AM,35
+21A,Gandhipuram-Railway Station,08:40 AM,40
+47A,Town Hall-Airport,08:50 AM,30
+10B,Bus Stand-Medical College,09:00 AM,45
+11H,Anna Nagar-Railway Station,09:10 AM,38
+29C,Airport-New Bus Stand,09:20 AM,42
+5C,Central Bus Stand-Town Hall,09:30 AM,28
+15A,Gandhipuram-Collector Office,09:40 AM,36
+24B,Railway Station-Airport,09:50 AM,31
+3D,Town Hall-Market,10:00 AM,25
+7A,Bus Stand-Airport,10:10 AM,40
+14C,Anna Nagar-Market,10:20 AM,33
+18B,Medical College-Railway Station,10:30 AM,29
+32A,Collector Office-Airport,10:40 AM,37
+54D,Market-Bus Stand,10:50 AM,41
+72A,Airport-Town Hall,11:00 AM,34
+102,Gandhipuram-Bus Stand,11:10 AM,39
+S1,Central Bus Stand-Airport,11:20 AM,27
+S2,Railway Station-Medical College,11:30 AM,43
+S3,Town Hall-Gandhipuram,11:40 AM,32
